@@ -1,4 +1,4 @@
-module github.com/ShellCode33/VM-Detection
+module github.com/mtfelian/vmdetect
 
 go 1.21
 

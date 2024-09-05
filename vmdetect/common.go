@@ -13,17 +13,25 @@ import (
 	"github.com/shirou/gopsutil/mem"
 )
 
-func PrintError(loggee interface{}) {
-	fmt.Printf("[x] %v\n", loggee)
+// Silent should be set to true to suppress output
+var Silent = true
+
+func PrintError(s any) {
+	if Silent {
+		return
+	}
+	fmt.Printf("[x] %v\n", s)
 }
 
-func PrintWarning(loggee interface{}) {
-	fmt.Printf("[!] %v\n", loggee)
+func PrintWarning(s any) {
+	if Silent {
+		return
+	}
+	fmt.Printf("[!] %v\n", s)
 }
 
 func DoesFileExist(path string) bool {
 	_, err := os.Stat(path)
-
 	if err != nil {
 		PrintError(err)
 	}

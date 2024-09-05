@@ -1,16 +1,16 @@
 //go:build windows
-// +build windows
 
 package vmdetect
 
 import (
 	"errors"
 	"fmt"
-	"golang.org/x/sys/windows/registry"
 	"os"
 	"path"
 	"path/filepath"
 	"strings"
+
+	"golang.org/x/sys/windows/registry"
 )
 
 func extractKeyTypeFrom(registryKey string) (registry.Key, string, error) {

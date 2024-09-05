@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/ShellCode33/VM-Detection/vmdetect"
+
+	"github.com/mtfelian/vmdetect/vmdetect"
 )
 
 func main() {
